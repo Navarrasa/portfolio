@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Definindo variáveis de cor (Paleta de Cores) */
 :root {
+  /* darkmode */
   --bg-color: #020202;
   --bg--color-revamp: #444242;
   --bdr-color:#494949;
@@ -17,13 +18,14 @@
   --fnt-color-hover: #c9c9c9;
 }
 
-.lightmode{
-  --bg-color: #020202;
-  --bg--color-revamp: #2e2d2d;
-  --bdr-color:#494949;
-  --fnt-color:#FBFEF9;
-  --btn-color:#66717E;
-  --emphasis-color:#5f5955;
+body.lightmode{
+  /* lightmode */
+  --bg-color: #dfdada;
+  --bg--color-revamp: #8f8d8d;
+  --bdr-color:#000000;
+  --fnt-color:#080707;
+  --btn-color:#636669;
+  --emphasis-color:#6e6a66;
   --bg--color-btn: #4e4e4e;
   --bg--color-revamp-hover: #5a5757;
   --fnt-color-hover: #c9c9c9;
@@ -46,15 +48,38 @@ html {
 
 body {
   background-color: var(--bg-color);
-  display: flex;
-  flex-direction: column;
+  color: var(--fnt-color);
+  transition: background 0.5s, color 0.5s;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 
+/* fonte global */
 .ubuntu-condensed-regular {
   font-family: "Ubuntu Condensed", serif;
   font-weight: 400;
   font-style: normal;
 }
+
+
+/* propriedades fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* darkmode - lightmode */
+
+.theme-icon {
+  display: none !important;
+}
+
+.theme-icon.active {
+  display: inline-block !important;
+}
+

@@ -1,20 +1,41 @@
-let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('switch-theme')
+const moonIcon = document.getElementById('moon');
+const sunIcon = document.getElementById('sun');
+let lightmode = localStorage.getItem('lightmode');
 
+const enableLightmode = () => {
+    document.body.classList.add('lightmode');
+    localStorage.setItem('lightmode', 'active');
+    moonIcon.classList.remove('active');
+    sunIcon.classList.add('active');
+};
 
-const enableDarkmode = () => {
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode', 'active')
+const disableLightmode = () => {
+    document.body.classList.remove('lightmode');
+    localStorage.setItem('lightmode', null);
+    moonIcon.classList.add('active');
+    sunIcon.classList.remove('active');
+};
+
+const disableIcon = () => {
+    if (lightmode === 'active') {
+        moonIcon.classList.remove('active');
+        sunIcon.classList.add('active');
+    }
+    else {
+        moonIcon.classList.add('active');
+        sunIcon.classList.remove('active');
+    }
 }
 
-const disableDarkmode = () => {
-    document.body.classList.remove('darkmode')
-    localStorage.setItem('darkmode', null)
+// Inicializa o tema com base no localStorage
+if (lightmode === 'active') {
+    enableLightmode();
+    disableIcon();
+} else {
+    disableLightmode();
+    disableIcon();
 }
 
-if(darkmode === 'active') enableDarkmode()
-
-themeSwitch.addEventListener("click", () => {
-    darkmode = localStorage.getItem('darkmode')
-    darkmode != 'active' ? enableDarkmode() : disableDarkmode()
-})
+// Adiciona eventos de clique aos ícones
+moonIcon.addEventListener('click', enableLightmode);
+sunIcon.addEventListener('click', disableLightmode);
