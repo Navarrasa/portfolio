@@ -21,7 +21,7 @@ header {
       align-items: center;
       width: 230px;
       border-radius: 20px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px) !important; 
   
       & ul{
         display: flex;
