@@ -6,7 +6,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Definindo variáveis de cor (Paleta de Cores) */
 :root {
-  --bg-color: #111010;
+  --bg-color: #020202;
+  --bg--color-revamp: #444242;
+  --bdr-color:#494949;
+  --fnt-color:#FBFEF9;
+  --btn-color:#686d74;
+  --emphasis-color:#5f5955;
+  --bg--color-btn: #292727;
+  --bg--color-revamp-hover: #5a5757;
+  --fnt-color-hover: #c9c9c9;
+}
+
+.lightmode{
+  --bg-color: #020202;
   --bg--color-revamp: #2e2d2d;
   --bdr-color:#494949;
   --fnt-color:#FBFEF9;
