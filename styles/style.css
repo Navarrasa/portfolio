@@ -20,11 +20,11 @@
 
 body.lightmode{
   /* lightmode */
-  --bg-color: #ece8e8;
-  --bg--color-revamp: #aca7a7;
+  --bg-color: #f0eeee;
+  --bg--color-revamp: #bbbaba;
   --bdr-color:#000000;
   --fnt-color:#080707;
-  --btn-color:#848586;
+  --btn-color:#8c8d8f;
   --emphasis-color:#6e6a66;
   --bg--color-btn: #4e4e4e;
   --bg--color-revamp-hover: #5a5757;
