@@ -1,8 +1,18 @@
+import { BriefcaseBusiness } from 'lucide-react';
+
 export default function Experiences() {
     return(
-        <section>
+        <section id="#experiences" className="w-full flex justify-center items-center p-4">
             <div>
-                <p>Projects</p>
+                <div className='flex items-center gap-6 opacity-80 hover:opacity-100 transition duration-500 ease-in-out'>
+                    <BriefcaseBusiness   size={64}
+                    className='transition duration-500 ease-in-out hover:scale-110'
+                    />
+                    <h2 className="text-5xl">Work Experiences</h2>
+                </div>
+                <div>
+                    <p></p>
+                </div>
             </div>
         </section>
     );

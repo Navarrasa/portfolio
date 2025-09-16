@@ -12,13 +12,13 @@ export default function VideoBackground() {
                     </Link>
                 </div>
             </div>
-            <div className="w-full h-full flex">
+            <div className="w-full h-full flex mt-8">
                 <video
                 src="/video/stacks.mp4"
                 autoPlay
                 muted
                 loop
-                className="w-auto h-6/12 object-cover"
+                className="h-[800px]"
                 ></video>
             </div>
         </section>
