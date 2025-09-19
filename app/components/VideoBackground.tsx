@@ -1,4 +1,7 @@
 import { ArrowDown } from 'lucide-react';
+import Image from 'next/image';
+import lightImage from '@/app/assets/lightmode.svg';
+import darkImage from '@/app/assets/darkmode.svg';
 import Link from 'next/link';
 
 export default function VideoBackground() {
@@ -13,13 +16,14 @@ export default function VideoBackground() {
                 </div>
             </div>
             <div className="w-full h-full flex mt-8">
-                <video
+                {/* <video
                 src="/video/stacks.mp4"
                 autoPlay
                 muted
                 loop
                 className="h-[800px]"
-                ></video>
+                ></video> */}
+                <Image src={lightImage} alt="Me" className="border-none outline-none" />
             </div>
         </section>
     );
