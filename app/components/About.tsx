@@ -12,16 +12,16 @@ export default function About(){
                     />
                     <h2 className="text-4xl">Welcome! I'm devBruno</h2>
                 </div>
-                <div className='w-[50%] items-center justify-center text-center text-xl gap-16 flex flex-col'>
-                    <p>I'm 20 years old, a Fullstack Developer, but with preferences on backend development. I'm studying Computer Science at Dr. Leandro Franceschini. I love when it comes to achieve new methods to create a solution to some problem.</p>
-                    <p className='p-4'>This is a little bit of my journey as a developer. have a look inside it!</p>
-                </div>
                 <div className='flex gap-6 p-4 opacity-80'>
                     {tech_stack.map((tech) => (
-                        <div key={tech.label} className="flex items-center gap-2 ">
+                        <div key={tech.label} className="flex items-center gap-2">
                             <Image src={tech.image} alt={tech.label} width={40} height={40} title={tech.label} className='transition ease-in-out hover:opacity-100 hover:scale-110 duration-700'/>
                         </div>
                     ))}
+                </div>
+                <div className='w-[50%] md:w-[75%] items-center justify-center text-center text-xl gap-16 flex flex-col'>
+                    <p>I'm 20 years old, a Fullstack Developer, but with preferences on backend development. I'm studying Computer Science at Dr. Leandro Franceschini. I love when it comes to achieve new methods to create a solution to some problem.</p>
+                    <p className='p-4'>This is a little bit of my journey as a developer. have a look inside it!</p>
                 </div>
             </div>
         </section>
