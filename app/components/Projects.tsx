@@ -8,7 +8,7 @@ export default function Projects() {
                     <FolderOpenDot  size={64}
                     className='transition duration-500 ease-in-out hover:scale-110'
                     />
-                    <h2 className="text-5xl">Favorite Projects</h2>
+                    <h2 className="text-4xl">Favorite Projects</h2>
                 </div>
                 <div>
                     <p></p>
