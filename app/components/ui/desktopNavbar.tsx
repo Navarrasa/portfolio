@@ -1,7 +1,7 @@
 import Link from "next/link";
 import SwitchTheme from "@/app/components/SwitchTheme";
 
-export default function Navbar() {
+export default function DesktopNavbar() {
 
     const links = [
         { href: "#about", label: "About" },

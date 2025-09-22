@@ -8,7 +8,7 @@ export default function TheDeveloper() {
         flex-col 
         items-center 
         justify-center 
-
+        px-4 py-8
         mt-8
         md:mb-10
       "
@@ -18,8 +18,7 @@ export default function TheDeveloper() {
           flex
           max-w-7xl 
           flex-col 
-          gap-4 
-        
+          gap-8
           md:mt-16
         "
       >
@@ -28,8 +27,11 @@ export default function TheDeveloper() {
           className="
             flex 
             w-full 
+            flex-col items-center
+            md:flex-row 
             justify-around 
-
+            text-center
+            gap-4
             md:gap-20 
             xl:gap-16
           "
@@ -37,7 +39,7 @@ export default function TheDeveloper() {
           <p
             className="
               rubik 
-              text-3xl 
+              text-4xl 
               md:text-[4rem] 
               xl:text-[7rem]
             "
@@ -47,7 +49,7 @@ export default function TheDeveloper() {
           <p
             className="
               rubik 
-              text-3xl 
+              text-4xl 
               md:text-[4rem] 
               xl:text-[7rem]
             "
@@ -61,23 +63,19 @@ export default function TheDeveloper() {
           className="
             flex 
             w-full 
-            gap-14
+            flex-col 
+            gap-4
+            md:flex-row 
+            md:gap-14
+            text-center
+            md:text-start
+            xl:text-start
           "
         >
-          <p
-            className="
-              md:w-[300px] 
-              xl:w-[450px]
-            "
-          >
+          <p className="text-sm max-w-md md:max-w-xs xl:max-w-sm">
             I am a backend developer with a passion for building scalable APIs and working with databases.
           </p>
-          <p
-            className="
-              md:w-[300px] 
-              xl:w-96
-            "
-          >
+          <p className="text-sm max-w-md md:max-w-xs xl:max-w-sm">
             My tech stack includes Python, Django, and PostgreSQL.
           </p>
         </div>

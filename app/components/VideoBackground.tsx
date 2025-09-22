@@ -6,46 +6,32 @@ import { useTheme } from "next-themes";
 
 export default function VideoBackground() {
   const { theme, systemTheme } = useTheme();
-
-  // resolve o tema atual (se "system", usa o do SO)
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <section className="
-      relative 
-      mb-8 
-      flex 
-      h-full 
-      w-full 
-      flex-col 
-      items-center 
-      justify-center
-    ">
-      {/* Texto e seta */}
-      <div className="
-        absolute 
-        top-0 
-        flex 
+    <section
+      className="
+        relative 
+        mb-8 
         w-full 
+        flex 
         flex-col 
-        items-end 
-        justify-end 
-        text-center 
-
-        md:p-2 
-        xl:p-8
-      ">
-        <div className="
-          z-10 
+      "
+    >
+      <div
+        className=" 
+          w-full 
           flex 
           flex-col 
           items-center 
-          gap-2
-        ">
-          <p className="
-            md:text-[14px] 
-            xl:text-xl
-          ">
+          justify-end 
+          text-center 
+          pt-4
+          z-10
+        "
+      >
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-xs md:text-sm xl:text-xl text-foreground">
             feel free to explore!
           </p>
           <Link href="#explore" className="cursor-pointer">
@@ -53,25 +39,22 @@ export default function VideoBackground() {
           </Link>
         </div>
       </div>
-
-      {/* Vídeo */}
-      <div>
-        {currentTheme === "dark" ? (
-          <video
-            src="/video/stackDarkmode.mp4"
-            autoPlay
-            muted
-            loop
-          />
-        ) : (
-          <video
-            src="/video/stackLightmode.mp4"
-            autoPlay
-            muted
-            loop
-          />
-        )}
+      {/* Vídeo responsivo */}
+      <div className="w-full">
+        <video
+          className="w-full h-full object-cover rounded-md"
+          src={
+            currentTheme === "dark"
+              ? "/video/stackDarkmode.mp4"
+              : "/video/stackLightmode.mp4"
+          }
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
       </div>
+       {/* Texto e seta */}
     </section>
   );
 }
