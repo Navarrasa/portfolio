@@ -34,7 +34,7 @@ export default function VideoBackground() {
           <p className="text-xs md:text-sm xl:text-xl text-foreground">
             feel free to explore!
           </p>
-          <Link href="#explore" className="cursor-pointer">
+          <Link href="#about" className="cursor-pointer">
             <ArrowDown className="animate-bounce" />
           </Link>
         </div>
