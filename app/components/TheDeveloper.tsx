@@ -8,76 +8,47 @@ export default function TheDeveloper() {
         flex-col 
         items-center 
         justify-center 
-        px-4 py-8
-        mt-8
-        md:mb-10
+        p-8
+        mt-6
+        md:mb-16
       "
     >
-      <div
-        className="
-          flex
-          max-w-7xl 
-          flex-col 
-          gap-8
-          md:mt-16
-        "
-      >
-        {/* Título */}
+      <div className="flex max-w-7xl flex-col gap-12 md:gap-20">
+        {/* Título + Descrição agrupados */}
         <div
           className="
             flex 
-            w-full 
-            flex-col items-center
-            md:flex-row 
-            justify-around 
-            text-center
-            gap-4
-            md:gap-20 
-            xl:gap-16
-          "
-        >
-          <p
-            className="
-              rubik 
-              text-4xl 
-              md:text-[4rem] 
-              xl:text-[7rem]
-            "
-          >
-            Backend
-          </p>
-          <p
-            className="
-              rubik 
-              text-4xl 
-              md:text-[4rem] 
-              xl:text-[7rem]
-            "
-          >
-            Developer
-          </p>
-        </div>
-
-        {/* Descrição */}
-        <div
-          className="
-            flex 
-            w-full 
             flex-col 
-            gap-4
             md:flex-row 
-            md:gap-14
-            text-center
-            md:text-start
-            xl:text-start
+            justify-between 
+            items-center 
+            md:items-start
+            gap-10 
+            md:gap-20
+            text-center 
+            md:text-left
+            max-w-7xl
           "
         >
-          <p className="text-sm max-w-md md:max-w-xs xl:max-w-sm">
-            I am a backend developer with a passion for building scalable APIs and working with databases.
-          </p>
-          <p className="text-sm max-w-md md:max-w-xs xl:max-w-sm">
-            My tech stack includes Python, Django, and PostgreSQL.
-          </p>
+          {/* Backend + descrição */}
+          <div className="flex flex-col items-center md:items-start gap-4 max-w-xl">
+            <p className="rubik text-4xl md:text-[4rem] xl:text-[5rem]">
+              Backend
+            </p>
+            <p className="sm:text-lg w-11/12">
+              I am a backend developer with a passion for building scalable APIs and working with databases.
+            </p>
+          </div>
+
+          {/* Developer + descrição */}
+          <div className="flex flex-col items-center md:items-start gap-4 max-w-xl">
+            <p className="rubik text-4xl md:text-[4rem] xl:text-[5rem]">
+              Developer
+            </p>
+            <p className="sm:text-lg">
+              My tech stack includes Python, Django, FastAPI, SQLite, MySQL, NextJS, Typescript and more!.
+            </p>
+          </div>
         </div>
       </div>
     </section>

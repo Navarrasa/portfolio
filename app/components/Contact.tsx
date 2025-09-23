@@ -21,7 +21,7 @@ export default function Contact() {
                         className="transition duration-500 ease-in-out hover:scale-110"
                         />
                     }
-                    <h2 className="text-2xl">Contact me!</h2>
+                    <h2 className="text-2xl sm:text-5xl">Contact me!</h2>
                 </div>
                 <div>
                     <p></p>
