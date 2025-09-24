@@ -30,7 +30,7 @@ export default function VideoBackground() {
           z-10
         "
       >
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 mb-1">
           <p className="text-xs md:text-sm xl:text-xl text-foreground">
             feel free to explore!
           </p>
