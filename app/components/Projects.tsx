@@ -2,6 +2,7 @@ import { FolderOpenDot } from 'lucide-react';
 import { useMediaQuery } from "@react-hook/media-query";
 import { projects } from '@/app/data/projects';
 import ProjectCard from '@/app/components/ui/ProjectCard';
+import Link from 'next/link';
 
 export default function Projects() {
 
@@ -27,10 +28,21 @@ export default function Projects() {
                     }
                     <h2 className="text-2xl sm:text-5xl font-semibold text-center">Favorite Projects</h2>
                 </div>
+                    <p className='text-xl p-2 text-center'>A list of my favorite projects that I have worked on.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {projects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
+                </div>
+                <div>
+                    <Link href={"https://github.com/Navarrasa"} 
+                    className="bg-[var(--popover)] py-2 px-4 rounded hover:bg-[var(--ring)] transition duration-300 shadow-md hover:shadow-lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title='View All Projects on GitHub'
+                    >
+                        View All Projects
+                    </Link>
                 </div>
             </div>
         </section>

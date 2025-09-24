@@ -2,6 +2,7 @@ import React from "react";
 import { Project } from "@/app/types/projects";
 import Image from "next/image";
 import { Github, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectCardProps {
   project: Project;
@@ -24,10 +25,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           alt={project.title}
           width={400}
           height={200}
-          objectFit="cover"
-          className="rounded-md w-full h-40"
+          className="rounded-md w-full h-40 object-cover"
         />
-        <p className="text-sm text-muted-foreground">{project.description}</p>
+        <p className="text-sm text-muted-foreground h-20">{project.description}</p>
         {/* Tags */}
         <div className="flex flex-wrap gap-2 pt-4 pb-4">
           {project.tags.map((tag, index) => (
@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Ações */}
         <div className="flex gap-3 p-6">
           {project.link && (
-            <a
+            <Link
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -52,10 +52,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             >
               <Github size={16} />
               Code
-            </a>
+            </Link>
           )}
           {project.website && (
-            <a
+            <Link
               href={project.website}
               target="_blank"
               rel="noopener noreferrer"
@@ -64,7 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             >
               <ExternalLink size={16} />
               Website
-            </a>
+            </Link>
           )}
         </div>
     </div>
