@@ -11,15 +11,15 @@ import TheDeveloper from '@/app/components/TheDeveloper';
 
 export default function Home() {
     return (
-        <div className="flex flex-col w-full justify-center items-center">
+        <div className="flex flex-col w-full justify-center items-center"> 
             <Header />  
             <main className="w-full flex flex-col justify-between">
-                <TheDeveloper />
-                <VideoBackground />
-                <About />
-                <Projects />
-                <Experiences />
-                <Contact />
+                    <TheDeveloper />
+                    <VideoBackground />
+                    <About />
+                    <Projects />
+                    <Experiences />
+                    <Contact />
             </main> 
             <Footer />
         </div>
