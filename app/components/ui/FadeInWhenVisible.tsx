@@ -21,7 +21,7 @@ export const AnimatedSection = ({
   as = 'section',
   id,
 }: AnimatedSectionProps) => {
-  const Component = motion[as] as any
+  const Component = motion[as as keyof typeof motion] as React.ElementType
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const controls = useAnimation()
