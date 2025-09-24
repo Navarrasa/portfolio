@@ -15,9 +15,6 @@ import {
 export default function ModeToggle() {
   const { setTheme, theme, systemTheme } = useTheme()
 
-  // tema resolvido (se for "system", pega o do SO)
-  const currentTheme = theme === "system" ? systemTheme : theme
-
   // console.log("Tema atual:", currentTheme)
 
   return (
